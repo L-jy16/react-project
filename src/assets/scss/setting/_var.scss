@@ -1,0 +1,75 @@
+:root {
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "nanumSquareNeo";
+    --mainNum-font: "gmarket";
+    --mainTit-font: "overpass";
+    --mainsub-font: "Sunflower";
+
+    --mainBg-color: #fdf7dd;
+    --mainfont-color: #023c44;
+    --subBg100: #fdf7dd;
+    --subBg200: #e7dba6;
+    --subBg300: #197885;
+    --subBg400: #023c44;
+    --subBg500: #ffffff;
+
+    --subcolor3_000: #1e8cdb;
+    --subcolor3_100: #197bc2;
+    --subcolor3_200: #13649e;
+    --subcolor3_300: #105485;
+    --subcolor3_400: #0b4269;
+    --subcolor3_500: #093250;
+    --subcolor3_600: #07283f ;
+
+    --subcolor2_000: #fdf7dd;
+    --subcolor2_100: #fcf0be;
+    --subcolor2_200: #fceeb7;
+    --subcolor2_300: #e7dba6;
+    --subcolor2_400: #dacc8d;
+    --subcolor2_500: #dac464;
+    --subcolor2_600: #bda84d;
+
+    --subcolor000: #197885;
+    --subcolor100: #047c8b;
+    --subcolor200: #006370;
+    --subcolor300: #005763;
+    --subcolor400: #023c44;
+    --subcolor500: #012a30;
+    --subcolor600: #051d20;
+
+    --white: #ffffff;
+    --white100: #e8e8e8;
+    --white200: #dddddd;
+    --white300: #c1c1c1;
+    --white400: #b3b3b3;
+    --white500: #a4a4a4;
+
+    --black: #000000;
+    --black100: #000000;
+    --black200: #000000;
+    --black300: #000000;
+    --black400: #000000;
+    --black500: #000000;
+
+    /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}
+
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+body {
+    background-color: var(--mainBg-color);
+    font-family: var(--mainKor-font);
+}
