@@ -54,8 +54,8 @@ lenis.js는 자바스크립트로 작성되어 다양한 플랫폼에서 사용�
 4. 폴더로 이동
 5. firebase 설치 `npm install -g firebase-tools`
 6. firebase 로그인 `firebase login`
-7. 프로젝트 초기화 및 배포, 확인
-   <img src="./src/assets/img/hosting.png"  width="500" height="800">
+7. 프로젝트 초기화 및 배포, 확인<br />
+    ![](./src/assets/img/hosting.png)
 
 ## 트러블 슈팅
 <details>
