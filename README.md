@@ -54,8 +54,18 @@ lenis.js는 자바스크립트로 작성되어 다양한 플랫폼에서 사용�
 4. 폴더로 이동
 5. firebase 설치 `npm install -g firebase-tools`
 6. firebase 로그인 `firebase login`
-7. 프로젝트 초기화 및 배포, 확인<br />
+7. 프로젝트 초기화 및 배포, 확인<br /><br />
     ![](./src/assets/img/hosting.png)
+
+## 구현기능
+- 구글 폰트 적용
+- smooth 효과 적용 https://lenis.studiofreight.com/
+- 자바스크립트 메뉴 클릭 이동 효과 적용
+- GSAP를 이용한 가로 효과
+- JavaScript 모듈 기능 적용
+- 웹표준 준수를 위한 스킵 메뉴 및 aria, role 적용
+- react 빌드 작업 npm run build
+- firebase 배포 작업
 
 ## 트러블 슈팅
 <details>
