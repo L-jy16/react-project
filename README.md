@@ -16,6 +16,9 @@
 
 7. 라우팅 및 상태 관리: 리액트 애플리케이션을 구축할 때, 라우팅 및 상태 관리를 위한 라이브러리와 도구를 통합하기 쉽습니다. 이로써 싱글 페이지 애플리케이션(SPA)을 쉽게 만들 수 있습니다.
 
+## 미리보기
+미리보기 : https://react-project0106.web.app
+
 ## 작업 순서
 1. 리액트 설치
 2. git에 업로드
@@ -52,8 +55,7 @@ lenis.js는 자바스크립트로 작성되어 다양한 플랫폼에서 사용�
 5. firebase 설치 `npm install -g firebase-tools`
 6. firebase 로그인 `firebase login`
 7. 프로젝트 초기화 및 배포, 확인
-   (/assets/img/hosting.png)
-
+   <img src="./src/assets/img/hosting.png"  width="500" height="800">
 
 ## 트러블 슈팅
 <details>
