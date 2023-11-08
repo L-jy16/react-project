@@ -2,6 +2,7 @@
     width: 100%;
     overflow: hidden;
 }
+
 .port__inner {
     padding: 16px;
 }
@@ -11,6 +12,7 @@
     flex-wrap: wrap;
     width: 7000px;
 }
+
 .port__title {
     position: sticky;
     left: 0;
@@ -28,6 +30,7 @@
     color: var(--subBg400);
     margin-bottom: 4vh;
 }
+
 .port__title em {
     font-family: var(--mainKor-font);
     font-size: 1.25rem;
@@ -35,6 +38,7 @@
     display: inline-block;
     vertical-align: 4px;
 }
+
 .port__item {
     margin-top: 40px;
     width: 500px;
@@ -45,9 +49,11 @@
     background-color: #fff;
     background-color: var(--subcolor000);
 }
+
 .port__item:nth-child(even) {
     background-color: var(--subcolor3_500);
 }
+
 .port__item .num {
     display: inline;
     font-size: 3vw;
@@ -55,12 +61,14 @@
     font-family: var(--mainNum-font);
     color: var(--subcolor2_600);
 }
+
 .port__item a img {
     border-radius: 15px;
     margin-top: -20px;
     filter: saturate(0);
     transition: all 0.3s;
 }
+
 .port__item a img:hover {
     margin-top: 0;
     filter: saturate(100%);
@@ -69,13 +77,14 @@
 .port__item h3 {
     text-align: center;
     padding: 1.2rem;
-    border-bottom: 2px dashed ;
+    border-bottom: 2px dashed;
     font-weight: bolder;
     color: var(--subcolor2_500);
     font-size: 1.8rem;
     margin-bottom: 1rem;
     font-family: var(--mainTit-font);
 }
+
 .port__item .desc {
     text-align: center;
     font-size: 1.2rem;

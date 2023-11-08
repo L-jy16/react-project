@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { contactText } from "../constants"
+
 const Contact = () => {
   return (
     <section id="contact">
@@ -17,12 +19,12 @@ const Contact = () => {
         </div>
         <div className="contact__text">
           <div className="text">
-            <div>
-              <a href="/"><em>KAKAO</em> : dlwldud0106</a>
-            </div>
-            <div>
-              <a href="/"><em>MAIL</em> : lee.jiyoung492@gmail.com</a>
-            </div>
+            {contactText.map((cont, key) => (
+              <div key={key}>
+                <a href={cont.link}><em>{cont.title[0]}</em> : {cont.title[1]}</a>
+              </div>
+            ))}
+
           </div>
         </div>
         <div className="contact__line bottom" aria-hidden="true">

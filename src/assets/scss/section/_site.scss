@@ -1,6 +1,7 @@
 .site__inner {
     padding: 16px;
 }
+
 .site__title {
     position: sticky;
     left: 0;
@@ -18,6 +19,7 @@
     color: var(--subBg400);
     margin-bottom: 4vh;
 }
+
 .site__title em {
     font-family: var(--mainKor-font);
     font-size: 1.25rem;
@@ -25,6 +27,7 @@
     display: inline-block;
     vertical-align: 4px;
 }
+
 .site__item {
     width: 100%;
     height: 70vh;
@@ -39,6 +42,7 @@
     position: sticky;
     left: 0;
 }
+
 .site__item .num {
     position: absolute;
     left: 2vw;
@@ -47,14 +51,14 @@
     font-size: 5vw;
     font-weight: 900;
     font-family: var(--mainNum-font);
-    color: var(--subcolor2_500);
+    color: var(--subcolor3_500);
 }
 
 .site__item .text {
     font-size: 3vw;
     line-height: 1.2;
     font-weight: bold;
-    color: var(--subcolor2_500);
+    color: var(--subcolor3_500);
     font-family: var(--mainTit-font);
     margin-bottom: 3vw;
 }
@@ -70,6 +74,7 @@
 .site__item .btn {
     margin-bottom: 1vw;
 }
+
 .site__item .btn a {
     font-size: 1.5vw;
     font-family: var(--mainNum-font);
@@ -78,6 +83,7 @@
     padding: 5px 20px;
     transition: all 0.3s;
 }
+
 .site__item .btn a:hover {
     color: var(--subcolor2_600);
     font-size: 1.7vw;
@@ -85,7 +91,7 @@
 
 .site__item .info {
     width: 98%;
-    font-size: 1.3vw;    
+    font-size: 1.3vw;
     color: var(--subcolor2_400);
 }
 
@@ -93,20 +99,23 @@
     background-color: var(--subcolor200);
     top: 180px;
 }
+
 .site__item.s2 {
     background-color: var(--subcolor300);
     top: 200px;
 }
+
 .site__item.s3 {
     background-color: var(--subcolor400);
     top: 220px;
 }
+
 .site__item.s4 {
     background-color: var(--subcolor500);
     top: 240px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .site__title {
         width: 100%;
         margin-bottom: 10vw;
@@ -116,24 +125,30 @@
         z-index: 1000;
         background-color: var(--mainBg-color);
     }
+
     .site__item.s1 {
         top: 140px;
     }
+
     .site__item.s2 {
         top: 160px;
     }
+
     .site__item.s3 {
         top: 180px;
     }
+
     .site__item.s4 {
         top: 200px;
     }
+
     .site__item .num {
         font-size: 80px;
         left: 20px;
         top: 20px;
     }
-    .site__item .text > div {
+
+    .site__item .text>div {
         font-size: 6vw;
     }
 
@@ -144,6 +159,11 @@
     .site__item .btn a {
         font-size: 3vw;
     }
+
+    .site__item .btn a:hover {
+        font-size: 3.5vw
+    }
+
     .site__item .info {
         flex-direction: column;
         width: 90%;

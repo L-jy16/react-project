@@ -1,135 +1,60 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
-import port01 from '../assets/img/img01.jpg'
+import { portText } from "../constants/index";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const Port = () => {
+  const horizontalRef = useRef(null);
+  const sectionRef = useRef([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const horizontal = horizontalRef.current;
+    const sections = sectionRef.current;
+
+    let scrollTween = gsap.to(sections, {
+      xPercent: -120 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: horizontal,
+        start: "top 56pzx",
+        end: () => "+=" + horizontal.offsetWidth,
+        pin: true,
+        scrub: 1,
+        // markers: true,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+      }
+    });
+
+    return () => {
+      scrollTween.kill();
+    };
+  }, [])
+
   return (
-    <section id="port">
+    <section id="port" ref={horizontalRef}>
       <div className="port__inner">
         <div className="port__title">
           portfolio <em>포폴 작업물</em>
         </div>
         <div className="port__wrap">
-          <div className="port__item p1">
-            <span className="num">01.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p2">
-            <span className="num">02.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p3">
-            <span className="num">03.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p4">
-            <span className="num">04.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p5">
-            <span className="num">05.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p6">
-            <span className="num">06.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p7">
-            <span className="num">07.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p8">
-            <span className="num">08.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p9">
-            <span className="num">09.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
-          <div className="port__item p10">
-            <span className="num">10.</span>
-            <a href="/">
-              <img src={port01} alt="포트폴리오" />
-            </a>
-            <h3 className="title">리액트를 이용한 포트폴리오</h3>
-            <p className="desc">
-              이 사이트는 정말 인상적인 포트폴리오입니다.
-              특히 스무스한 효과와 가로 모드로 높은 퀄리티를 자랑합니다.
-              디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼  수 있습니다.
-            </p>
-          </div>
+          {portText.map((port, key) => (
+            <article className={`port__item p${key + 1}`} key={key} ref={(el) => (sectionRef.current[key] = el)}>
+              <span className="num">{port.num}</span>
+              <a href={port.view}>
+                <img src={port.img} alt="포트폴리오" />
+              </a>
+              <h3 className="title">{port.title}</h3>
+              <p className="desc">
+                {port.desc}
+              </p>
+            </article>
+          ))}
+
         </div>
       </div>
     </section>
